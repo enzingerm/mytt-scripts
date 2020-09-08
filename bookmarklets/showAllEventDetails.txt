@@ -1,0 +1,17 @@
+javascript: (function() {
+    let showFunction = function(clttfeednr, containerId) {
+        var $container = $('#' + containerId);
+        if (!$container.is(':visible')) {
+            $container.find('.events-data').load("eventDetails?fq=false&eventId=" + clttfeednr, function() {
+                $container.show()
+            });
+        } else {
+            $container.hide();
+        }
+        document.getElementById('closealllink').style.display = "inline";
+    };
+    for (let match of document.body.innerHTML.matchAll(/openmoreinfos\((\d{3,15}),\'(\w+)\'\)/g)) {
+        showFunction(match[1], match[2])
+    }
+})();
+
