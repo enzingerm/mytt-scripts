@@ -1,0 +1,21 @@
+javascript: (function() {
+    let statsTable = document.getElementsByClassName("table-mytt")[0];
+    let headRow = statsTable.tHead.children[0];
+    let nameTitle = headRow.children[2];
+    let pidTitleElement = document.createElement('th');
+    pidTitleElement.appendChild(document.createTextNode('Person-ID'));
+    headRow.insertBefore(pidTitleElement, nameTitle);
+    for (let body of statsTable.tBodies) for (let row of body.children) if (row.children.length > 2) {
+        let namecell = row.children[2];
+        let lnk = namecell.children[0];
+        let elem;
+        if (lnk && lnk instanceof HTMLAnchorElement) {
+            let personID = lnk.dataset.tooltipdata.match(/\d{3,10}/)[0];
+            elem = document.createElement('td');
+            elem.appendChild(document.createTextNode(personID));
+            row.insertBefore(elem, namecell);
+        }
+        
+    }
+})();
+
