@@ -12,8 +12,8 @@ Seite darstellt.
 
 Es gibt momentan folgende Bookmarklets fuer MyTischtennis:
 * `personID`: Wird auf eine offene TTR-Rangliste (`https://www.mytischtennis.de/community/ranking`)
-angewendet und fuegt eine neue Spalte in der Tabelle hinzu, die die interne PersonID des Spielers
-anzeigt.
+oder die Statistiken-Seite (`https://www.mytischtennis.de/community/matches`) angewendet und
+fuegt eine neue Spalte in der Tabelle hinzu, die die interne PersonID des Spielers/Gegners anzeigt.
 * `showAllEventDetails`: Wird auf die TTR-Historie eines Spielers angewendet, um alle
 Veranstaltungen aufzuklappen und die Suche nach Gegnern zu vereinfachen.
 
